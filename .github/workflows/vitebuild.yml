@@ -1,4 +1,4 @@
-name: Deploy vite react app to github pages
+name: Push vite react build to gh-pages repo
 
 on:
   push:
