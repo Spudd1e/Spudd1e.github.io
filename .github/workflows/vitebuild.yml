@@ -1,4 +1,4 @@
-name: Push vite react build to gh-pages repo
+name: Push vite react build to gh-pages branch
 
 on:
   push:
