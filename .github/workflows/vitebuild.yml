@@ -20,9 +20,14 @@ jobs:
       - name: Working directory
         run: echo $(pwd) | ls
       
-        
-      - name: Build app
-        run: npm run build
+      - name: Print working directory and list files
+        run: |
+          echo "Current working directory:"
+          echo $(pwd)
+          echo "Listing files in the src directory:"
+          ls src
+            - name: Build app
+              run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
