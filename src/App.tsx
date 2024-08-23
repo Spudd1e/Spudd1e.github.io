@@ -1,5 +1,8 @@
 import './App.css'
 
+
+// @ts-ignore
+
 import Linkbox from './components/LinkBox'
 
 
