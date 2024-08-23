@@ -26,6 +26,13 @@ jobs:
           echo $(pwd)
           echo "Listing files in the src directory:"
           ls src
+      - name: clear cache
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ hashFiles('**/package*.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
       - name: Build app
         run: npm run build
 
