@@ -1,5 +1,5 @@
 import './App.css'
-import Linkbox from './components/linkbox'
+import Linkbox from './components/LinkBox'
 
 function App() {
   
