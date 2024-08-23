@@ -22,8 +22,8 @@ jobs:
      needs: Setup
      steps:
         - name: Working directory
-          run: echo $(pwd)
-          run: ls
+          run: echo $(pwd) | ls
+        
           
         - name: Build app
           run: npm run build
