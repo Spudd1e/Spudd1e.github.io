@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" height="500" width="500">
+
+    <circle r="250" cx="250" cy="250" fill="#800020" />
+
+    <path id="spudd1ecurve" d=" M50 250 a 200 200 180 0 1 400 0" style="fill:none; stroke:none"/>
+    <path id="bladecurve" d=" M50 250 a 200 200 180 0 0 400 0" style="fill:none; stroke:none" />
+
+    <text style="fill:white;font-size:100">
+        <textPath href="#spudd1ecurve" textLength="100%" startOffset="50%" text-anchor="middle" dominant-baseline="middle">BLADE</textPath>
+        <textPath href="#bladecurve" textLength="100%" startOffset="50%" text-anchor="middle" dominant-baseline="middle" >Spudd1e</textPath>
+    </text>
+</svg>
