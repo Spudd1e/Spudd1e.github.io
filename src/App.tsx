@@ -1,11 +1,6 @@
 import './App.css'
 
-
-
-// @ts-ignore
-import Linkbox from './components/LinkBox'
-
-
+import Linkbox from './components/Linkbox'
 
 function App() {
   
