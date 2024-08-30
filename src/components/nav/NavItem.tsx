@@ -1,4 +1,4 @@
-import './SideNavItem.scss'
+import './NavItem.scss'
 
 interface navItem {
     text : string,

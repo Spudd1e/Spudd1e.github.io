@@ -1,13 +1,13 @@
 import './App.scss'
 import Linkbox from './components/Linkbox'
-import SideNavItem from './components/sidenav/SideNavItem'
+import SideNavItem from './components/nav/NavItem'
 function App() {
   
 
   return (
     <>
       <main>
-        <div className='sideNav'>
+        <div className='nav'>
           <SideNavItem text='Test Nav' page='https://google.com' />
         </div>
         <ul>
