@@ -1,0 +1,36 @@
+name: Deploy to pages
+on: 
+  push: 
+    branches: [main]
+permissions:
+  pages: write
+  id-token: write
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v7
+        - uses: actions/setup-node@v6
+          with:
+            node-version: 25.x
+        - name: Install pnpm
+          run: npm install pnpm -g
+        - name: Build
+          run: pnpm run build
+        - name: Output artifact
+          uses: actions/upload-artifact@v7
+          with:
+            path: .svelte-kit\output\server
+            retention-days: 7
+    deploy:
+      needs: build
+      environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+      runs-on: ubuntu-latest
+      steps:
+        - name: Deploy to github pages
+          id: deployment
+          uses: actions/deploy-pages@v5
+      
+            
